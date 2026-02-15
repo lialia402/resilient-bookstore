@@ -1,0 +1,1064 @@
+[
+  {
+    "id": "1",
+    "title": "Throne of Glass",
+    "author": "Sarah J. Maas",
+    "price": 17.99,
+    "stock": 40,
+    "description": "An assassin is summoned to the castle to compete for her freedom.",
+    "reviews": []
+  },
+  {
+    "id": "2",
+    "title": "Crown of Midnight",
+    "author": "Sarah J. Maas",
+    "price": 18.99,
+    "stock": 38,
+    "description": "Dark secrets emerge as the assassin serves the king.",
+    "reviews": []
+  },
+  {
+    "id": "3",
+    "title": "Heir of Fire",
+    "author": "Sarah J. Maas",
+    "price": 19.99,
+    "stock": 35,
+    "description": "A journey of magic, loss, and transformation.",
+    "reviews": []
+  },
+  {
+    "id": "4",
+    "title": "A Court of Thorns and Roses",
+    "author": "Sarah J. Maas",
+    "price": 18.99,
+    "stock": 50,
+    "description": "A mortal woman is drawn into the dangerous world of the fae.",
+    "reviews": []
+  },
+  {
+    "id": "5",
+    "title": "A Court of Mist and Fury",
+    "author": "Sarah J. Maas",
+    "price": 19.99,
+    "stock": 48,
+    "description": "Power, love, and betrayal reshape the fae courts.",
+    "reviews": []
+  },
+  {
+    "id": "6",
+    "title": "House of Earth and Blood",
+    "author": "Sarah J. Maas",
+    "price": 21.99,
+    "stock": 30,
+    "description": "Urban fantasy filled with grief, friendship, and rebellion.",
+    "reviews": []
+  },
+  {
+    "id": "7",
+    "title": "Fourth Wing",
+    "author": "Rebecca Yarros",
+    "price": 20.99,
+    "stock": 45,
+    "description": "A brutal dragon rider academy where survival is not guaranteed.",
+    "reviews": []
+  },
+  {
+    "id": "8",
+    "title": "Iron Flame",
+    "author": "Rebecca Yarros",
+    "price": 21.99,
+    "stock": 42,
+    "description": "War, dragons, and impossible choices continue.",
+    "reviews": []
+  },
+  {
+    "id": "9",
+    "title": "The Bridge Kingdom",
+    "author": "Danielle L. Jensen",
+    "price": 16.99,
+    "stock": 28,
+    "description": "A princess trained as a spy is married to her kingdom's enemy.",
+    "reviews": []
+  },
+  {
+    "id": "10",
+    "title": "The Traitor Queen",
+    "author": "Danielle L. Jensen",
+    "price": 17.99,
+    "stock": 26,
+    "description": "Loyalties are tested in a war between kingdoms.",
+    "reviews": []
+  },
+  {
+    "id": "11",
+    "title": "From Blood and Ash",
+    "author": "Jennifer L. Armentrout",
+    "price": 18.99,
+    "stock": 34,
+    "description": "A forbidden romance threatens a kingdom's future.",
+    "reviews": []
+  },
+  {
+    "id": "12",
+    "title": "A Kingdom of Flesh and Fire",
+    "author": "Jennifer L. Armentrout",
+    "price": 19.99,
+    "stock": 32,
+    "description": "Secrets unravel as gods and monsters awaken.",
+    "reviews": []
+  },
+  {
+    "id": "13",
+    "title": "Kingdom of the Wicked",
+    "author": "Kerri Maniscalco",
+    "price": 17.99,
+    "stock": 36,
+    "description": "A witch teams up with a demon prince to solve a murder.",
+    "reviews": []
+  },
+  {
+    "id": "14",
+    "title": "Kingdom of the Cursed",
+    "author": "Kerri Maniscalco",
+    "price": 18.99,
+    "stock": 33,
+    "description": "Power struggles and temptation rule the underworld.",
+    "reviews": []
+  },
+  {
+    "id": "15",
+    "title": "The Serpent and the Wings of Night",
+    "author": "Carissa Broadbent",
+    "price": 19.99,
+    "stock": 29,
+    "description": "A deadly vampire tournament with love at its core.",
+    "reviews": []
+  },
+  {
+    "id": "16",
+    "title": "The Ashes and the Star-Cursed King",
+    "author": "Carissa Broadbent",
+    "price": 20.99,
+    "stock": 27,
+    "description": "Betrayal and destiny collide in a vampire court.",
+    "reviews": []
+  },
+  {
+    "id": "17",
+    "title": "The Priory of the Orange Tree",
+    "author": "Samantha Shannon",
+    "price": 22.99,
+    "stock": 20,
+    "description": "Epic fantasy with dragons, queens, and ancient magic.",
+    "reviews": []
+  },
+  {
+    "id": "18",
+    "title": "An Ember in the Ashes",
+    "author": "Sabaa Tahir",
+    "price": 16.99,
+    "stock": 31,
+    "description": "A rebellion ignites in a brutal empire.",
+    "reviews": []
+  },
+  {
+    "id": "19",
+    "title": "Queen of Shadows",
+    "author": "Sarah J. Maas",
+    "price": 18.99,
+    "stock": 37,
+    "description": "The assassin returns to reclaim her kingdom and her name.",
+    "reviews": []
+  },
+  {
+    "id": "20",
+    "title": "Empire of Storms",
+    "author": "Sarah J. Maas",
+    "price": 19.99,
+    "stock": 34,
+    "description": "Allies and enemies converge as war looms.",
+    "reviews": []
+  },
+  {
+    "id": "21",
+    "title": "Tower of Dawn",
+    "author": "Sarah J. Maas",
+    "price": 18.99,
+    "stock": 30,
+    "description": "A healer and a captain seek allies across the southern continent.",
+    "reviews": []
+  },
+  {
+    "id": "22",
+    "title": "Kingdom of Ash",
+    "author": "Sarah J. Maas",
+    "price": 21.99,
+    "stock": 28,
+    "description": "The final battle for freedom and love.",
+    "reviews": []
+  },
+  {
+    "id": "23",
+    "title": "A Court of Wings and Ruin",
+    "author": "Sarah J. Maas",
+    "price": 19.99,
+    "stock": 46,
+    "description": "The war for Prythian reaches its climax.",
+    "reviews": []
+  },
+  {
+    "id": "24",
+    "title": "A Court of Frost and Starlight",
+    "author": "Sarah J. Maas",
+    "price": 14.99,
+    "stock": 44,
+    "description": "A winter solstice novella in the Night Court.",
+    "reviews": []
+  },
+  {
+    "id": "25",
+    "title": "A Court of Silver Flames",
+    "author": "Sarah J. Maas",
+    "price": 20.99,
+    "stock": 42,
+    "description": "Nesta's journey of healing and power.",
+    "reviews": []
+  },
+  {
+    "id": "26",
+    "title": "House of Sky and Breath",
+    "author": "Sarah J. Maas",
+    "price": 22.99,
+    "stock": 28,
+    "description": "Crescent City's secrets deepen as rebellion stirs.",
+    "reviews": []
+  },
+  {
+    "id": "27",
+    "title": "House of Flame and Shadow",
+    "author": "Sarah J. Maas",
+    "price": 23.99,
+    "stock": 25,
+    "description": "Fates cross worlds in the conclusion of Crescent City.",
+    "reviews": []
+  },
+  {
+    "id": "28",
+    "title": "Onyx Storm",
+    "author": "Rebecca Yarros",
+    "price": 21.99,
+    "stock": 40,
+    "description": "The Empyrean saga continues with new dangers.",
+    "reviews": []
+  },
+  {
+    "id": "29",
+    "title": "The Dark Shores",
+    "author": "Danielle L. Jensen",
+    "price": 17.99,
+    "stock": 24,
+    "description": "A soldier and a scholar are bound by fate and magic.",
+    "reviews": []
+  },
+  {
+    "id": "30",
+    "title": "The Malediction Trilogy",
+    "author": "Danielle L. Jensen",
+    "price": 18.99,
+    "stock": 22,
+    "description": "Cursed trolls and a princess who could free them.",
+    "reviews": []
+  },
+  {
+    "id": "31",
+    "title": "The Crown of Gilded Bones",
+    "author": "Jennifer L. Armentrout",
+    "price": 19.99,
+    "stock": 30,
+    "description": "The truth of the gods and Poppy's lineage is revealed.",
+    "reviews": []
+  },
+  {
+    "id": "32",
+    "title": "The War of Two Queens",
+    "author": "Jennifer L. Armentrout",
+    "price": 20.99,
+    "stock": 28,
+    "description": "Poppy must become the queen she was born to be.",
+    "reviews": []
+  },
+  {
+    "id": "33",
+    "title": "Kingdom of the Feared",
+    "author": "Kerri Maniscalco",
+    "price": 19.99,
+    "stock": 31,
+    "description": "The final installment in the Kingdom of the Wicked trilogy.",
+    "reviews": []
+  },
+  {
+    "id": "34",
+    "title": "Six Scorched Roses",
+    "author": "Carissa Broadbent",
+    "price": 9.99,
+    "stock": 35,
+    "description": "A vampire and a dying woman make a dangerous bargain.",
+    "reviews": []
+  },
+  {
+    "id": "35",
+    "title": "The Dawn of Onyx",
+    "author": "Kate Golden",
+    "price": 18.99,
+    "stock": 26,
+    "description": "A thief is captured by a ruthless king and must survive his court.",
+    "reviews": []
+  },
+  {
+    "id": "36",
+    "title": "A Torch Against the Night",
+    "author": "Sabaa Tahir",
+    "price": 17.99,
+    "stock": 29,
+    "description": "Elias and Laia fight to save those they love.",
+    "reviews": []
+  },
+  {
+    "id": "37",
+    "title": "A Reaper at the Gates",
+    "author": "Sabaa Tahir",
+    "price": 18.99,
+    "stock": 27,
+    "description": "The Blood Shrike faces the Nightbringer and her own demons.",
+    "reviews": []
+  },
+  {
+    "id": "38",
+    "title": "A Sky Beyond the Storm",
+    "author": "Sabaa Tahir",
+    "price": 19.99,
+    "stock": 25,
+    "description": "The Ember Quartet reaches its devastating conclusion.",
+    "reviews": []
+  },
+  {
+    "id": "39",
+    "title": "The Bone Shard Daughter",
+    "author": "Andrea Stewart",
+    "price": 18.99,
+    "stock": 23,
+    "description": "An empire built on bone shard magic and a daughter who would claim it.",
+    "reviews": []
+  },
+  {
+    "id": "40",
+    "title": "The Jasmine Throne",
+    "author": "Tasha Suri",
+    "price": 19.99,
+    "stock": 24,
+    "description": "A captive princess and a maidservant ignite a revolution.",
+    "reviews": []
+  },
+  {
+    "id": "41",
+    "title": "The Once and Future Witches",
+    "author": "Alix E. Harrow",
+    "price": 17.99,
+    "stock": 26,
+    "description": "Three sisters rediscover magic and sisterhood in a patriarchal world.",
+    "reviews": []
+  },
+  {
+    "id": "42",
+    "title": "The Cruel Prince",
+    "author": "Holly Black",
+    "price": 16.99,
+    "stock": 41,
+    "description": "A mortal girl must survive the treacherous High Court of Faerie.",
+    "reviews": []
+  },
+  {
+    "id": "43",
+    "title": "The Wicked King",
+    "author": "Holly Black",
+    "price": 17.99,
+    "stock": 38,
+    "description": "Power, betrayal, and the crown of Elfhame.",
+    "reviews": []
+  },
+  {
+    "id": "44",
+    "title": "The Queen of Nothing",
+    "author": "Holly Black",
+    "price": 18.99,
+    "stock": 36,
+    "description": "Jude must risk everything to reclaim her kingdom.",
+    "reviews": []
+  },
+  {
+    "id": "45",
+    "title": "Shadow and Bone",
+    "author": "Leigh Bardugo",
+    "price": 16.99,
+    "stock": 45,
+    "description": "A soldier discovers a power that could save her country.",
+    "reviews": []
+  },
+  {
+    "id": "46",
+    "title": "Siege and Storm",
+    "author": "Leigh Bardugo",
+    "price": 17.99,
+    "stock": 42,
+    "description": "Alina's power grows as dark forces close in.",
+    "reviews": []
+  },
+  {
+    "id": "47",
+    "title": "Ruin and Rising",
+    "author": "Leigh Bardugo",
+    "price": 18.99,
+    "stock": 40,
+    "description": "The final battle for Ravka and the truth of the Darkling.",
+    "reviews": []
+  },
+  {
+    "id": "48",
+    "title": "Six of Crows",
+    "author": "Leigh Bardugo",
+    "price": 18.99,
+    "stock": 48,
+    "description": "A dangerous heist in the heart of Ketterdam.",
+    "reviews": []
+  },
+  {
+    "id": "49",
+    "title": "Crooked Kingdom",
+    "author": "Leigh Bardugo",
+    "price": 19.99,
+    "stock": 44,
+    "description": "The crew fights for revenge and redemption.",
+    "reviews": []
+  },
+  {
+    "id": "50",
+    "title": "A Darker Shade of Magic",
+    "author": "V.E. Schwab",
+    "price": 17.99,
+    "stock": 35,
+    "description": "Four Londons and a smuggler who can travel between them.",
+    "reviews": []
+  },
+  {
+    "id": "51",
+    "title": "A Gathering of Shadows",
+    "author": "V.E. Schwab",
+    "price": 18.99,
+    "stock": 32,
+    "description": "A magical tournament and rising darkness.",
+    "reviews": []
+  },
+  {
+    "id": "52",
+    "title": "A Conjuring of Light",
+    "author": "V.E. Schwab",
+    "price": 19.99,
+    "stock": 30,
+    "description": "An ancient evil threatens all four Londons.",
+    "reviews": []
+  },
+  {
+    "id": "53",
+    "title": "The Invisible Life of Addie LaRue",
+    "author": "V.E. Schwab",
+    "price": 18.99,
+    "stock": 39,
+    "description": "A woman makes a deal to live forever and is forgotten by everyone.",
+    "reviews": []
+  },
+  {
+    "id": "54",
+    "title": "Uprooted",
+    "author": "Naomi Novik",
+    "price": 16.99,
+    "stock": 33,
+    "description": "A young woman is taken by the Dragon to serve him and defend the valley.",
+    "reviews": []
+  },
+  {
+    "id": "55",
+    "title": "Spinning Silver",
+    "author": "Naomi Novik",
+    "price": 17.99,
+    "stock": 31,
+    "description": "Three women reshape their fates in a winter kingdom.",
+    "reviews": []
+  },
+  {
+    "id": "56",
+    "title": "The Night Circus",
+    "author": "Erin Morgenstern",
+    "price": 17.99,
+    "stock": 37,
+    "description": "A competition of magic and illusion becomes a love story.",
+    "reviews": []
+  },
+  {
+    "id": "57",
+    "title": "The Starless Sea",
+    "author": "Erin Morgenstern",
+    "price": 18.99,
+    "stock": 29,
+    "description": "A reader is drawn into a secret world of stories and fate.",
+    "reviews": []
+  },
+  {
+    "id": "58",
+    "title": "Red Queen",
+    "author": "Victoria Aveyard",
+    "price": 16.99,
+    "stock": 34,
+    "description": "A girl with silver blood in a world divided by red and silver.",
+    "reviews": []
+  },
+  {
+    "id": "59",
+    "title": "Glass Sword",
+    "author": "Victoria Aveyard",
+    "price": 17.99,
+    "stock": 32,
+    "description": "Mare hunts other Reds with powers while fleeing the crown.",
+    "reviews": []
+  },
+  {
+    "id": "60",
+    "title": "King's Cage",
+    "author": "Victoria Aveyard",
+    "price": 18.99,
+    "stock": 30,
+    "description": "Mare is imprisoned as war engulfs the kingdom.",
+    "reviews": []
+  },
+  {
+    "id": "61",
+    "title": "War Storm",
+    "author": "Victoria Aveyard",
+    "price": 19.99,
+    "stock": 28,
+    "description": "The final battle for Norta's future.",
+    "reviews": []
+  },
+  {
+    "id": "62",
+    "title": "A Deal with the Elf King",
+    "author": "Elise Kova",
+    "price": 14.99,
+    "stock": 36,
+    "description": "A human woman is chosen to marry the Elf King and save her people.",
+    "reviews": []
+  },
+  {
+    "id": "63",
+    "title": "A Dance with the Fae Prince",
+    "author": "Elise Kova",
+    "price": 15.99,
+    "stock": 34,
+    "description": "A woman trapped in a cruel family finds freedom in the Fae realm.",
+    "reviews": []
+  },
+  {
+    "id": "64",
+    "title": "A Kiss with the Fae King",
+    "author": "Elise Kova",
+    "price": 16.99,
+    "stock": 32,
+    "description": "The final book in the Married to Magic series.",
+    "reviews": []
+  },
+  {
+    "id": "65",
+    "title": "The Shadows Between Us",
+    "author": "Tricia Levenseller",
+    "price": 16.99,
+    "stock": 28,
+    "description": "A girl plans to marry the Shadow King, then kill him and take his kingdom.",
+    "reviews": []
+  },
+  {
+    "id": "66",
+    "title": "The Prison Healer",
+    "author": "Lynette Noni",
+    "price": 17.99,
+    "stock": 26,
+    "description": "A healer in a brutal prison must save a dying rebel.",
+    "reviews": []
+  },
+  {
+    "id": "67",
+    "title": "The Gilded Cage",
+    "author": "Lynette Noni",
+    "price": 18.99,
+    "stock": 24,
+    "description": "Kiva's loyalties are tested in the capital.",
+    "reviews": []
+  },
+  {
+    "id": "68",
+    "title": "The Blood Traitor",
+    "author": "Lynette Noni",
+    "price": 19.99,
+    "stock": 22,
+    "description": "The Prison Healer trilogy concludes.",
+    "reviews": []
+  },
+  {
+    "id": "69",
+    "title": "Defy the Night",
+    "author": "Brigid Kemmerer",
+    "price": 17.99,
+    "stock": 27,
+    "description": "A kingdom plagued by sickness and a girl who steals medicine to save the poor.",
+    "reviews": []
+  },
+  {
+    "id": "70",
+    "title": "Defend the Dawn",
+    "author": "Brigid Kemmerer",
+    "price": 18.99,
+    "stock": 25,
+    "description": "Alliances and betrayals at sea.",
+    "reviews": []
+  },
+  {
+    "id": "71",
+    "title": "A Curse So Dark and Lonely",
+    "author": "Brigid Kemmerer",
+    "price": 16.99,
+    "stock": 38,
+    "description": "A Beauty and the Beast retelling with a cursed prince and a modern girl.",
+    "reviews": []
+  },
+  {
+    "id": "72",
+    "title": "A Heart So Fierce and Broken",
+    "author": "Brigid Kemmerer",
+    "price": 17.99,
+    "stock": 35,
+    "description": "The true heir to Emberfall is revealed.",
+    "reviews": []
+  },
+  {
+    "id": "73",
+    "title": "A Vow So Bold and Deadly",
+    "author": "Brigid Kemmerer",
+    "price": 18.99,
+    "stock": 33,
+    "description": "The curse breaker trilogy concludes in war.",
+    "reviews": []
+  },
+  {
+    "id": "74",
+    "title": "To Kill a Kingdom",
+    "author": "Alexandra Christo",
+    "price": 16.99,
+    "stock": 30,
+    "description": "A siren princess and a pirate prince in a Little Mermaid-inspired dark tale.",
+    "reviews": []
+  },
+  {
+    "id": "75",
+    "title": "The Kinder Poison",
+    "author": "Natalie Mae",
+    "price": 17.99,
+    "stock": 26,
+    "description": "A girl is chosen as the human sacrifice in a deadly race for the crown.",
+    "reviews": []
+  },
+  {
+    "id": "76",
+    "title": "The Cruelest Mercy",
+    "author": "Natalie Mae",
+    "price": 18.99,
+    "stock": 24,
+    "description": "The sequel to The Kinder Poison.",
+    "reviews": []
+  },
+  {
+    "id": "77",
+    "title": "We Hunt the Flame",
+    "author": "Hafsah Faizal",
+    "price": 17.99,
+    "stock": 28,
+    "description": "A hunter and a prince seek a magical artifact in a cursed forest.",
+    "reviews": []
+  },
+  {
+    "id": "78",
+    "title": "We Free the Stars",
+    "author": "Hafsah Faizal",
+    "price": 18.99,
+    "stock": 26,
+    "description": "The Sands of Arawiya duology concludes.",
+    "reviews": []
+  },
+  {
+    "id": "79",
+    "title": "The City of Brass",
+    "author": "S.A. Chakraborty",
+    "price": 18.99,
+    "stock": 31,
+    "description": "A con woman in Cairo discovers she is the last of a magical bloodline.",
+    "reviews": []
+  },
+  {
+    "id": "80",
+    "title": "The Kingdom of Copper",
+    "author": "S.A. Chakraborty",
+    "price": 19.99,
+    "stock": 29,
+    "description": "Nahri and Ali are caught in Daevabad's political storm.",
+    "reviews": []
+  },
+  {
+    "id": "81",
+    "title": "The Empire of Gold",
+    "author": "S.A. Chakraborty",
+    "price": 20.99,
+    "stock": 27,
+    "description": "The Daevabad trilogy reaches its epic end.",
+    "reviews": []
+  },
+  {
+    "id": "82",
+    "title": "The Poppy War",
+    "author": "R.F. Kuang",
+    "price": 17.99,
+    "stock": 33,
+    "description": "A war orphan discovers a devastating power and enters an elite military academy.",
+    "reviews": []
+  },
+  {
+    "id": "83",
+    "title": "The Dragon Republic",
+    "author": "R.F. Kuang",
+    "price": 18.99,
+    "stock": 30,
+    "description": "Rin fights for a new republic while haunted by the past.",
+    "reviews": []
+  },
+  {
+    "id": "84",
+    "title": "The Burning God",
+    "author": "R.F. Kuang",
+    "price": 19.99,
+    "stock": 28,
+    "description": "The Poppy War trilogy concludes in fire and blood.",
+    "reviews": []
+  },
+  {
+    "id": "85",
+    "title": "The Bear and the Nightingale",
+    "author": "Katherine Arden",
+    "price": 16.99,
+    "stock": 32,
+    "description": "A girl who can see spirits must save her village from winter's demons.",
+    "reviews": []
+  },
+  {
+    "id": "86",
+    "title": "The Girl in the Tower",
+    "author": "Katherine Arden",
+    "price": 17.99,
+    "stock": 30,
+    "description": "Vasya defies convention and rides into Moscow.",
+    "reviews": []
+  },
+  {
+    "id": "87",
+    "title": "The Winter of the Witch",
+    "author": "Katherine Arden",
+    "price": 18.99,
+    "stock": 28,
+    "description": "Vasya must unite mortals and magical beings against a common enemy.",
+    "reviews": []
+  },
+  {
+    "id": "88",
+    "title": "Sorcery of Thorns",
+    "author": "Margaret Rogerson",
+    "price": 17.99,
+    "stock": 29,
+    "description": "A librarian apprentice must stop a conspiracy that could release the world's most dangerous books.",
+    "reviews": []
+  },
+  {
+    "id": "89",
+    "title": "Enchantée",
+    "author": "Gita Trelease",
+    "price": 16.99,
+    "stock": 27,
+    "description": "A girl uses magic to survive in Paris on the eve of revolution.",
+    "reviews": []
+  },
+  {
+    "id": "90",
+    "title": "Alliance of the Sun",
+    "author": "Gita Trelease",
+    "price": 17.99,
+    "stock": 25,
+    "description": "The sequel to Enchantée.",
+    "reviews": []
+  },
+  {
+    "id": "91",
+    "title": "The Beautiful",
+    "author": "Renée Ahdieh",
+    "price": 17.99,
+    "stock": 26,
+    "description": "New Orleans, vampires, and a girl seeking answers about her sister's death.",
+    "reviews": []
+  },
+  {
+    "id": "92",
+    "title": "The Damned",
+    "author": "Renée Ahdieh",
+    "price": 18.99,
+    "stock": 24,
+    "description": "Sébastien's past and the vampire court collide.",
+    "reviews": []
+  },
+  {
+    "id": "93",
+    "title": "The Flame and the Flower",
+    "author": "Kathleen E. Woodiwiss",
+    "price": 14.99,
+    "stock": 22,
+    "description": "A classic historical romance that defined the genre.",
+    "reviews": []
+  },
+  {
+    "id": "94",
+    "title": "Daughter of the Moon Goddess",
+    "author": "Sue Lynn Tan",
+    "price": 18.99,
+    "stock": 30,
+    "description": "A young woman embarks on a quest to free her mother from the Celestial Emperor.",
+    "reviews": []
+  },
+  {
+    "id": "95",
+    "title": "Heart of the Sun Warrior",
+    "author": "Sue Lynn Tan",
+    "price": 19.99,
+    "stock": 28,
+    "description": "The Celestial Kingdom duology concludes.",
+    "reviews": []
+  },
+  {
+    "id": "96",
+    "title": "Babel",
+    "author": "R.F. Kuang",
+    "price": 20.99,
+    "stock": 26,
+    "description": "Translation, silver, and revolution at Oxford's Royal Institute of Translation.",
+    "reviews": []
+  },
+  {
+    "id": "97",
+    "title": "Yellowface",
+    "author": "R.F. Kuang",
+    "price": 18.99,
+    "stock": 31,
+    "description": "A dark satire about publishing, identity, and theft.",
+    "reviews": []
+  },
+  {
+    "id": "98",
+    "title": "The Bone Shard Emperor",
+    "author": "Andrea Stewart",
+    "price": 19.99,
+    "stock": 21,
+    "description": "Lin must consolidate power as an emperor while the Alanga return.",
+    "reviews": []
+  },
+  {
+    "id": "99",
+    "title": "The Bone Shard War",
+    "author": "Andrea Stewart",
+    "price": 20.99,
+    "stock": 19,
+    "description": "The Drowning Empire trilogy concludes.",
+    "reviews": []
+  },
+  {
+    "id": "100",
+    "title": "The Oleander Sword",
+    "author": "Tasha Suri",
+    "price": 19.99,
+    "stock": 23,
+    "description": "The sequel to The Jasmine Throne.",
+    "reviews": []
+  },
+  {
+    "id": "101",
+    "title": "The Book of Night",
+    "author": "Holly Black",
+    "price": 18.99,
+    "stock": 27,
+    "description": "A modern dark fantasy about shadow magic and con artists.",
+    "reviews": []
+  },
+  {
+    "id": "102",
+    "title": "Ninth House",
+    "author": "Leigh Bardugo",
+    "price": 18.99,
+    "stock": 35,
+    "description": "A dropout is offered a second chance at Yale's most secret society.",
+    "reviews": []
+  },
+  {
+    "id": "103",
+    "title": "Hell Bent",
+    "author": "Leigh Bardugo",
+    "price": 19.99,
+    "stock": 32,
+    "description": "Galaxy Stern returns to rescue a friend from hell.",
+    "reviews": []
+  },
+  {
+    "id": "104",
+    "title": "The Atlas Six",
+    "author": "Olivie Blake",
+    "price": 18.99,
+    "stock": 34,
+    "description": "Six magicians are invited to compete for a place in the Alexandrian Society.",
+    "reviews": []
+  },
+  {
+    "id": "105",
+    "title": "The Atlas Paradox",
+    "author": "Olivie Blake",
+    "price": 19.99,
+    "stock": 30,
+    "description": "The Atlas series continues with betrayal and time magic.",
+    "reviews": []
+  },
+  {
+    "id": "106",
+    "title": "The Atlas Complex",
+    "author": "Olivie Blake",
+    "price": 20.99,
+    "stock": 28,
+    "description": "The final book in the Atlas trilogy.",
+    "reviews": []
+  },
+  {
+    "id": "107",
+    "title": "One Dark Window",
+    "author": "Rachel Gillig",
+    "price": 17.99,
+    "stock": 29,
+    "description": "A girl with a monster in her head must find magical cards to save her kingdom.",
+    "reviews": []
+  },
+  {
+    "id": "108",
+    "title": "Two Twisted Crowns",
+    "author": "Rachel Gillig",
+    "price": 18.99,
+    "stock": 27,
+    "description": "The Shepherd King duology concludes.",
+    "reviews": []
+  },
+  {
+    "id": "109",
+    "title": "Divine Rivals",
+    "author": "Rebecca Ross",
+    "price": 18.99,
+    "stock": 38,
+    "description": "Two rival journalists find connection through magical letters during a war of the gods.",
+    "reviews": []
+  },
+  {
+    "id": "110",
+    "title": "Ruthless Vows",
+    "author": "Rebecca Ross",
+    "price": 19.99,
+    "stock": 35,
+    "description": "The Letters of Enchantment duology concludes.",
+    "reviews": []
+  },
+  {
+    "id": "111",
+    "title": "A River Enchanted",
+    "author": "Rebecca Ross",
+    "price": 17.99,
+    "stock": 28,
+    "description": "A bard is summoned to an island where children are vanishing.",
+    "reviews": []
+  },
+  {
+    "id": "112",
+    "title": "A Fire Endless",
+    "author": "Rebecca Ross",
+    "price": 18.99,
+    "stock": 26,
+    "description": "The Elements of Cadence duology concludes.",
+    "reviews": []
+  },
+  {
+    "id": "113",
+    "title": "The Very Secret Society of Irregular Witches",
+    "author": "Sangu Mandanna",
+    "price": 16.99,
+    "stock": 31,
+    "description": "A witch takes a job teaching three young witches in a found family romance.",
+    "reviews": []
+  },
+  {
+    "id": "114",
+    "title": "Loathe to Love You",
+    "author": "Ali Hazelwood",
+    "price": 16.99,
+    "stock": 40,
+    "description": "Three STEM novellas: enemies to lovers and second chances.",
+    "reviews": []
+  },
+  {
+    "id": "115",
+    "title": "The Love Hypothesis",
+    "author": "Ali Hazelwood",
+    "price": 15.99,
+    "stock": 45,
+    "description": "A fake relationship in academia turns into something real.",
+    "reviews": []
+  },
+  {
+    "id": "116",
+    "title": "Love on the Brain",
+    "author": "Ali Hazelwood",
+    "price": 16.99,
+    "stock": 42,
+    "description": "A neuroscientist and her nemesis must work together at NASA.",
+    "reviews": []
+  },
+  {
+    "id": "117",
+    "title": "Love, Theoretically",
+    "author": "Ali Hazelwood",
+    "price": 17.99,
+    "stock": 38,
+    "description": "An adjunct who fake-dates for cash meets the brother of her client.",
+    "reviews": []
+  },
+  {
+    "id": "118",
+    "title": "Bride",
+    "author": "Ali Hazelwood",
+    "price": 18.99,
+    "stock": 36,
+    "description": "A marriage of convenience between a human and a Vampyre in a world of uneasy truce.",
+    "reviews": []
+  }
+]
