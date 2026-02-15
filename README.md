@@ -23,7 +23,12 @@ pip install -r requirements.txt
 python app.py
 ```
 
-API runs at **http://localhost:5000**. Books are loaded from `backend/data/books.json`.
+API runs at **http://localhost:5000**. Books are loaded from `backend/data/books.json`. To (re)generate 100+ books (overwrites `books.json`):
+
+```bash
+cd backend
+python scripts/seed_books.py
+```
 
 **Endpoints:** `GET /books` (paginated: `?cursor=&limit=&q=&author=`), `GET /books/<id>`, `POST /books/<id>/favorite`, `GET /cart`, `POST /cart/items`, `POST /cart/clear`, `POST /cart/discount`.  
 **Discount codes (for testing):** `SAVE10` (10% off), `SAVE20` (20% off), `FLAT5` ($5 off).
