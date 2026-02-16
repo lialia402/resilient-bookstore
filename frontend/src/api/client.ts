@@ -9,8 +9,9 @@ export async function apiGet<T>(
   params?: Record<string, string>,
   signal?: AbortSignal
 ): Promise<T> {
-  const url = new URL(path, window.location.origin)
-  url.pathname = BASE + path
+  const [pathnameOnly, searchPart] = path.split('?')
+  const url = new URL(BASE + pathnameOnly, window.location.origin)
+  if (searchPart) url.search = searchPart
   if (params) {
     Object.entries(params).forEach(([k, v]) => url.searchParams.set(k, v))
   }

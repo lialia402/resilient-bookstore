@@ -5,8 +5,8 @@
 import { apiGet, apiPost } from './client'
 import type { CartResponse, ClearCartResponse, DiscountResult } from './types'
 
-export function fetchCart(): Promise<CartResponse> {
-  return apiGet<CartResponse>('/cart')
+export function fetchCart(signal?: AbortSignal): Promise<CartResponse> {
+  return apiGet<CartResponse>('/cart', undefined, signal)
 }
 
 export function addToCart(bookId: string, quantity?: number): Promise<CartResponse> {

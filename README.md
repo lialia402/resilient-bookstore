@@ -10,6 +10,8 @@ MVP bookstore demonstrating **server state management** with TanStack Query (Rea
 | Backend  | Python Flask          |
 | Data     | In-memory / JSON (TBD)|
 
+**Code style:** Prefer modern patterns — React components and hooks use `export const Name = () => ...` (arrow functions), not `export function Name()`.
+
 ## Setup
 
 ### Backend (Flask)
