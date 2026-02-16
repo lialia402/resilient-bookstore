@@ -16,7 +16,7 @@ export const SearchBar = () => {
     <div className="search-bar">
       <input
         type="search"
-        placeholder="Search by title or author…"
+        placeholder="Search by title or author"
         value={raw}
         onChange={(e) => setRaw(e.target.value)}
         aria-label="Search books by title or author"

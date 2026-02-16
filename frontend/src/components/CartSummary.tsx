@@ -1,10 +1,5 @@
+import { applyDiscount } from '../lib/applyDiscount'
 import type { CartItem, DiscountResult } from '../api/types'
-
-function applyDiscount(totalPrice: number, discount: DiscountResult | undefined): number {
-  if (!discount?.valid) return totalPrice
-  if (discount.type === 'percent') return totalPrice * (1 - discount.value / 100)
-  return Math.max(0, totalPrice - discount.value)
-}
 
 interface CartSummaryProps {
   totalItems: number

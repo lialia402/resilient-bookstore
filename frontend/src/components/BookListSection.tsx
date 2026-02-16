@@ -8,16 +8,8 @@ import { ErrorBanner } from './ErrorBanner'
 import { useToggleFavorite } from '../hooks/useToggleFavorite'
 import { useAddToCart } from '../hooks/useAddToCart'
 import { usePrefetchBookDetail } from '../hooks/usePrefetchBookDetail'
+import { parseApiError } from '../lib/parseApiError'
 import type { Book } from '../api/types'
-
-function parseApiError(error: unknown): string {
-  const msg = error instanceof Error ? error.message : 'Could not add to cart.'
-  try {
-    const j = JSON.parse(msg) as { error?: string }
-    if (typeof j?.error === 'string') return j.error
-  } catch { /* use msg as-is */ }
-  return msg
-}
 
 export const BookListSection = () => {
   const { query } = useSearchParams()
