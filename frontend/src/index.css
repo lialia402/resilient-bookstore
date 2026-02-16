@@ -147,9 +147,16 @@ body {
 }
 
 .book-card__meta {
-  margin: 0;
+  margin: 0 0 0.5rem;
   font-size: 0.85rem;
   color: #666;
+}
+
+.book-card__add-cart {
+  margin-top: 0.5rem;
+  padding: 0.35rem 0.6rem;
+  font-size: 0.85rem;
+  cursor: pointer;
 }
 
 /* —— Detail modal —— */
@@ -203,8 +210,14 @@ body {
   color: #666;
 }
 
-.detail-modal__favorite {
+.detail-modal__actions {
+  display: flex;
+  gap: 0.5rem;
   margin-bottom: 1rem;
+}
+
+.detail-modal__favorite,
+.detail-modal__add-cart {
   padding: 0.4rem 0.75rem;
   cursor: pointer;
   font-size: 0.9rem;
@@ -260,4 +273,64 @@ body {
   margin: 0;
   font-size: 0.9rem;
   color: #888;
+}
+
+.cart__discount {
+  margin-top: 0.75rem;
+}
+
+.cart__discount label {
+  display: block;
+  font-size: 0.85rem;
+  margin-bottom: 0.25rem;
+}
+
+.cart__discount-input {
+  width: 100%;
+  padding: 0.4rem 0.5rem;
+  font-size: 0.9rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.cart__discount-message {
+  margin: 0.25rem 0 0;
+  font-size: 0.85rem;
+  color: #555;
+}
+
+.cart__total {
+  margin: 0.5rem 0 0;
+  font-weight: 600;
+}
+
+.cart__total-note {
+  font-weight: normal;
+  color: #555;
+}
+
+.cart__clear {
+  margin-top: 0.75rem;
+  padding: 0.4rem 0.75rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.cart__clear:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.cart__error {
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  background: #fee;
+  border: 1px solid #c00;
+  border-radius: 4px;
+  font-size: 0.85rem;
+}
+
+.cart__error button {
+  margin-left: 0.5rem;
+  cursor: pointer;
 }

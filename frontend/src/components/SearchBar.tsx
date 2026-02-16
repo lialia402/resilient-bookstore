@@ -1,23 +1,25 @@
+import { useState, useEffect } from 'react'
 import { useSearchParams } from '../context/SearchParamsContext'
 
+const SEARCH_DEBOUNCE_MS = 1000
+
 export const SearchBar = () => {
-  const { q, setQ, author, setAuthor } = useSearchParams()
+  const { setQuery } = useSearchParams()
+  const [raw, setRaw] = useState('')
+
+  useEffect(() => {
+    const id = setTimeout(() => setQuery(raw), SEARCH_DEBOUNCE_MS)
+    return () => clearTimeout(id)
+  }, [raw, setQuery])
+
   return (
     <div className="search-bar">
       <input
         type="search"
         placeholder="Search by title or author…"
-        value={q}
-        onChange={(e) => setQ(e.target.value)}
+        value={raw}
+        onChange={(e) => setRaw(e.target.value)}
         aria-label="Search books by title or author"
-        className="search-bar__input"
-      />
-      <input
-        type="text"
-        placeholder="Filter by author"
-        value={author}
-        onChange={(e) => setAuthor(e.target.value)}
-        aria-label="Filter by author"
         className="search-bar__input"
       />
     </div>

@@ -1,13 +1,14 @@
 import { useBookDetail } from '../hooks/useBookDetail'
-import type { Book } from '../api/types'
+import type { BookDetail } from '../api/types'
 
 interface DetailModalProps {
   bookId: string | null
   onClose: () => void
   onToggleFavorite: (bookId: string) => void
+  onAddToCart: (bookId: string) => void
 }
 
-export const DetailModal = ({ bookId, onClose, onToggleFavorite }: DetailModalProps) => {
+export const DetailModal = ({ bookId, onClose, onToggleFavorite, onAddToCart }: DetailModalProps) => {
   const { data: book, status, error } = useBookDetail(bookId)
 
   if (!bookId) return null
@@ -35,6 +36,7 @@ export const DetailModal = ({ bookId, onClose, onToggleFavorite }: DetailModalPr
             book={book}
             isFavorite={book.favorite}
             onToggleFavorite={() => onToggleFavorite(book.id)}
+            onAddToCart={() => onAddToCart(book.id)}
           />
         )}
       </div>
@@ -46,10 +48,12 @@ const DetailContent = ({
   book,
   isFavorite,
   onToggleFavorite,
+  onAddToCart,
 }: {
-  book: Book & { description: string; reviews?: Array<{ id: string; author: string; rating: number; text: string }> }
+  book: BookDetail
   isFavorite?: boolean
   onToggleFavorite: () => void
+  onAddToCart: () => void
 }) => (
     <>
       <h2 id="detail-modal-title" className="detail-modal__title">{book.title}</h2>
@@ -57,14 +61,19 @@ const DetailContent = ({
       <p className="detail-modal__meta">
         ${book.price.toFixed(2)} · {book.stock} in stock
       </p>
-      <button
-        type="button"
-        className="detail-modal__favorite"
-        onClick={onToggleFavorite}
-        aria-label={isFavorite ? 'Remove from favorites' : 'Add to favorites'}
-      >
-        {isFavorite ? '♥ Favorite' : '♡ Add to favorites'}
-      </button>
+      <div className="detail-modal__actions">
+        <button
+          type="button"
+          className="detail-modal__favorite"
+          onClick={onToggleFavorite}
+          aria-label={isFavorite ? 'Remove from favorites' : 'Add to favorites'}
+        >
+          {isFavorite ? '♥ Favorite' : '♡ Add to favorites'}
+        </button>
+        <button type="button" className="detail-modal__add-cart" onClick={onAddToCart}>
+          Add to cart
+        </button>
+      </div>
       <p className="detail-modal__description">{book.description}</p>
       {book.reviews && book.reviews.length > 0 && (
         <section className="detail-modal__reviews">

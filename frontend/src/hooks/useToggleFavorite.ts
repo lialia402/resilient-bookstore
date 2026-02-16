@@ -1,9 +1,7 @@
-import { useMutation, useQueryClient } from '@tanstack/react-query'
+import { useMutation, useQueryClient, type InfiniteData } from '@tanstack/react-query'
 import { queryKeys } from '../queryKeys'
 import { toggleFavorite } from '../api/books'
-import type { Book } from '../api/types'
-import type { InfiniteData } from '@tanstack/react-query'
-import type { BooksResponse } from '../api/types'
+import type { Book, BooksResponse } from '../api/types'
 
 export const useToggleFavorite = () => {
   const queryClient = useQueryClient()

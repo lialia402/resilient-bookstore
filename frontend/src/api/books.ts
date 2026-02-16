@@ -5,14 +5,13 @@ import { apiGet, apiPost } from './client'
 import type { BookDetail, BooksResponse } from './types'
 
 export function fetchBooks(
-  params: { cursor?: string; limit?: number; q?: string; author?: string },
+  params: { cursor?: string; limit?: number; q?: string },
   signal?: AbortSignal
 ): Promise<BooksResponse> {
   const search = new URLSearchParams()
   if (params.cursor) search.set('cursor', params.cursor)
   if (params.limit) search.set('limit', String(params.limit))
   if (params.q) search.set('q', params.q)
-  if (params.author) search.set('author', params.author)
   const query = search.toString()
   return apiGet<BooksResponse>(query ? `/books?${query}` : '/books', undefined, signal)
 }

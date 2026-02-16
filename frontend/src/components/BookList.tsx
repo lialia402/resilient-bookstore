@@ -5,16 +5,15 @@ import { BookCard } from './BookCard'
 import type { Book } from '../api/types'
 
 interface BookListProps {
-  q?: string
-  author?: string
+  query?: string
   onBookSelect: (book: Book) => void
   onToggleFavorite: (bookId: string) => void
+  onAddToCart: (bookId: string) => void
 }
 
-export const BookList = ({ q, author, onBookSelect, onToggleFavorite }: BookListProps) => {
+export const BookList = ({ query, onBookSelect, onToggleFavorite, onAddToCart }: BookListProps) => {
   const { data, fetchNextPage, hasNextPage, isFetchingNextPage, status, error } = useInfiniteBooks({
-    q,
-    author,
+    q: query,
   })
   const sentinelRef = useRef<HTMLDivElement>(null)
   useInfiniteScroll(sentinelRef, { fetchNextPage, hasNextPage, isFetchingNextPage })
@@ -33,6 +32,7 @@ export const BookList = ({ q, author, onBookSelect, onToggleFavorite }: BookList
               book={book}
               onSelect={onBookSelect}
               onToggleFavorite={onToggleFavorite}
+              onAddToCart={onAddToCart}
             />
           </li>
         ))}

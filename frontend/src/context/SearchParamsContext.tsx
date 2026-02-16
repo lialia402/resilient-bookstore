@@ -1,19 +1,16 @@
 import { createContext, useContext, useState, type ReactNode } from 'react'
 
 interface SearchParamsContextValue {
-  q: string
-  setQ: (q: string) => void
-  author: string
-  setAuthor: (author: string) => void
+  query: string
+  setQuery: (query: string) => void
 }
 
 const SearchParamsContext = createContext<SearchParamsContextValue | null>(null)
 
 export const SearchParamsProvider = ({ children }: { children: ReactNode }) => {
-  const [q, setQ] = useState('')
-  const [author, setAuthor] = useState('')
+  const [query, setQuery] = useState('')
   return (
-    <SearchParamsContext.Provider value={{ q, setQ, author, setAuthor }}>
+    <SearchParamsContext.Provider value={{ query, setQuery }}>
       {children}
     </SearchParamsContext.Provider>
   )

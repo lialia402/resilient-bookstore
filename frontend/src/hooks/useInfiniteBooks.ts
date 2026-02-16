@@ -6,17 +6,16 @@ const DEFAULT_LIMIT = 20
 
 export interface UseInfiniteBooksParams {
   q?: string
-  author?: string
   limit?: number
 }
 
 export const useInfiniteBooks = (params: UseInfiniteBooksParams = {}) => {
-  const { q = '', author = '', limit = DEFAULT_LIMIT } = params
+  const { q = '', limit = DEFAULT_LIMIT } = params
 
   return useInfiniteQuery({
-    queryKey: queryKeys.books.list({ q, author, limit }),
+    queryKey: queryKeys.books.list({ q, limit }),
     queryFn: ({ pageParam, signal }) =>
-      fetchBooks({ cursor: pageParam, limit, q: q || undefined, author: author || undefined }, signal),
+      fetchBooks({ cursor: pageParam, limit, q: q || undefined }, signal),
     initialPageParam: undefined as string | undefined,
     getNextPageParam: (lastPage) => lastPage.nextCursor ?? undefined,
   })

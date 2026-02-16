@@ -24,9 +24,9 @@
 export const queryKeys = {
   books: {
     all: ['books'] as const,
-    /** Match all list queries (any q/author/limit). Use to invalidate lists without touching detail caches. */
+    /** Match all list queries (any q/limit). Use to invalidate lists without touching detail caches. */
     lists: () => ['books', 'list'] as const,
-    list: (params: { q?: string; author?: string; limit?: number }) =>
+    list: (params: { q?: string; limit?: number }) =>
       ['books', 'list', params] as const,
     detail: (id: string | null) => ['books', 'detail', id] as const,
   },
