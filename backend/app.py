@@ -106,8 +106,9 @@ def post_cart_items():
     quantity = body.get("quantity", 1)
     if not book_id:
         return {"error": "bookId required"}, 400
-    if not add_to_cart(book_id, quantity):
-        return {"error": "Book not found or invalid quantity"}, 400
+    err = add_to_cart(book_id, quantity)
+    if err:
+        return {"error": err}, 400
     return get_cart_response()
 
 

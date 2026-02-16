@@ -45,7 +45,7 @@ export const Cart = () => {
         <>
           <ul className="cart__list">
             {data.items.map((item) => (
-              <li key={`${item.bookId}-${item.quantity}`}>
+              <li key={item.bookId}>
                 {item.title} × {item.quantity}
               </li>
             ))}

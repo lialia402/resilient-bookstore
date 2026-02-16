@@ -58,23 +58,31 @@ resilient-bookstore/
 │   ├── app.py              # Flask routes
 │   ├── data_store.py       # Books, favorites, cart (in-memory)
 │   ├── data/books.json     # Book catalog
+│   ├── scripts/seed_books.py
 │   └── requirements.txt
 ├── frontend/
 │   ├── src/
-│   │   ├── api/            # API client + book/cart fetchers
+│   │   ├── api/            # Client + book/cart fetchers, types
 │   │   ├── components/     # UI components
-│   │   ├── hooks/          # React Query hooks
-│   │   ├── types/          # TypeScript types
+│   │   ├── context/        # SearchParamsProvider
+│   │   ├── hooks/          # React Query + custom hooks
+│   │   ├── queryKeys.ts
+│   │   ├── queryClient.ts
 │   │   ├── App.tsx
 │   │   └── main.tsx
 │   ├── index.html
 │   ├── package.json
 │   ├── tsconfig.json
 │   └── vite.config.ts
+├── ARCHITECTURE.md         # Cache, optimistic flows, re-render, query keys
 ├── README.md
-└── TASKS.md               # Task breakdown
+└── TASKS.md
 ```
+
+## Environment
+
+No environment variables are required for local development. The frontend dev server proxies `/api` to `http://localhost:5000` (see `frontend/vite.config.ts`). Ensure the backend is running on that port before using the app.
 
 ## Architecture & decisions
 
-Will be documented in **ARCHITECTURE.md** (cache strategy, optimistic updates, re-render prevention, conditional fetching, query keys).
+See **ARCHITECTURE.md** for cache strategy (staleTime/gcTime), optimistic favorite and clear-cart flows, re-render prevention and verification, conditional discount fetch, query key design, and the definition of “currently visible” for the inventory value widget.

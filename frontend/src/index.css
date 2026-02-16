@@ -42,6 +42,12 @@ body {
   min-width: 0;
 }
 
+.inventory-value {
+  margin: 0 0 0.75rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+
 .app__error {
   position: fixed;
   bottom: 1rem;

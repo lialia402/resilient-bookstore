@@ -9,9 +9,18 @@ interface BookListProps {
   onBookSelect: (book: Book) => void
   onToggleFavorite: (bookId: string) => void
   onAddToCart: (bookId: string) => void
+  onHoverBook?: (bookId: string) => void
+  hoverDelayMs?: number
 }
 
-export const BookList = ({ query, onBookSelect, onToggleFavorite, onAddToCart }: BookListProps) => {
+export const BookList = ({
+  query,
+  onBookSelect,
+  onToggleFavorite,
+  onAddToCart,
+  onHoverBook,
+  hoverDelayMs,
+}: BookListProps) => {
   const { data, fetchNextPage, hasNextPage, isFetchingNextPage, status, error } = useInfiniteBooks({
     q: query,
   })
@@ -33,6 +42,8 @@ export const BookList = ({ query, onBookSelect, onToggleFavorite, onAddToCart }:
               onSelect={onBookSelect}
               onToggleFavorite={onToggleFavorite}
               onAddToCart={onAddToCart}
+              onHoverBook={onHoverBook}
+              hoverDelayMs={hoverDelayMs}
             />
           </li>
         ))}

@@ -1,3 +1,4 @@
+import { useRef } from 'react'
 import type { Book } from '../api/types'
 
 interface BookCardProps {
@@ -5,12 +6,38 @@ interface BookCardProps {
   onSelect: (book: Book) => void
   onToggleFavorite: (bookId: string) => void
   onAddToCart: (bookId: string) => void
+  onHoverBook?: (bookId: string) => void
+  hoverDelayMs?: number
 }
 
-export const BookCard = ({ book, onSelect, onToggleFavorite, onAddToCart }: BookCardProps) => (
+export const BookCard = ({
+  book,
+  onSelect,
+  onToggleFavorite,
+  onAddToCart,
+  onHoverBook,
+  hoverDelayMs = 500,
+}: BookCardProps) => {
+  const hoverTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
+
+  const handleMouseEnter = () => {
+    if (!onHoverBook) return
+    hoverTimerRef.current = setTimeout(() => onHoverBook(book.id), hoverDelayMs)
+  }
+
+  const handleMouseLeave = () => {
+    if (hoverTimerRef.current) {
+      clearTimeout(hoverTimerRef.current)
+      hoverTimerRef.current = null
+    }
+  }
+
+  return (
   <article
     className="book-card"
     onClick={() => onSelect(book)}
+    onMouseEnter={handleMouseEnter}
+    onMouseLeave={handleMouseLeave}
     role="button"
     tabIndex={0}
     onKeyDown={(e) => e.key === 'Enter' && onSelect(book)}
@@ -45,4 +72,5 @@ export const BookCard = ({ book, onSelect, onToggleFavorite, onAddToCart }: Book
       Add to cart
     </button>
   </article>
-);
+  )
+}

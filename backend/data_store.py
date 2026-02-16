@@ -141,16 +141,25 @@ def get_cart_response() -> dict:
     }
 
 
-def add_to_cart(book_id: str, quantity: int = 1) -> bool:
-    """Add or update quantity for book_id. Returns True if book exists."""
+def add_to_cart(book_id: str, quantity: int = 1) -> str | None:
+    """
+    Add or update quantity for book_id.
+    Returns None on success, or an error message string if the add is not allowed
+    (book not found, invalid quantity, or would exceed stock).
+    """
     if book_id not in books_by_id or quantity <= 0:
-        return False
+        return "Book not found or invalid quantity"
+    book = books_by_id[book_id]
+    stock = book.get("stock", 0)
+    current_qty = sum(row.get("quantity", 0) for row in cart if row.get("bookId") == book_id)
+    if current_qty + quantity > stock:
+        return "Exceeds available stock"
     for row in cart:
         if row.get("bookId") == book_id:
             row["quantity"] = row["quantity"] + quantity
-            return True
+            return None
     cart.append({"bookId": book_id, "quantity": quantity})
-    return True
+    return None
 
 
 def clear_cart_mut(simulate_failure: bool = False) -> bool:

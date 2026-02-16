@@ -1,4 +1,7 @@
+import { useQuery } from '@tanstack/react-query'
 import { useBookDetail } from '../hooks/useBookDetail'
+import { queryKeys } from '../queryKeys'
+import { fetchCart } from '../api/cart'
 import type { BookDetail } from '../api/types'
 
 interface DetailModalProps {
@@ -8,10 +11,22 @@ interface DetailModalProps {
   onAddToCart: (bookId: string) => void
 }
 
-export const DetailModal = ({ bookId, onClose, onToggleFavorite, onAddToCart }: DetailModalProps) => {
+export const DetailModal = ({
+  bookId,
+  onClose,
+  onToggleFavorite,
+  onAddToCart,
+}: DetailModalProps) => {
   const { data: book, status, error } = useBookDetail(bookId)
+  const { data: cartData } = useQuery({
+    queryKey: queryKeys.cart.all,
+    queryFn: ({ signal }) => fetchCart(signal),
+    enabled: !!bookId,
+  })
 
   if (!bookId) return null
+
+  const quantityInCart = cartData?.items.find((i) => i.bookId === bookId)?.quantity ?? 0
 
   return (
     <div
@@ -34,6 +49,7 @@ export const DetailModal = ({ bookId, onClose, onToggleFavorite, onAddToCart }: 
         {status === 'success' && book && (
           <DetailContent
             book={book}
+            quantityInCart={quantityInCart}
             isFavorite={book.favorite}
             onToggleFavorite={() => onToggleFavorite(book.id)}
             onAddToCart={() => onAddToCart(book.id)}
@@ -46,15 +62,19 @@ export const DetailModal = ({ bookId, onClose, onToggleFavorite, onAddToCart }: 
 
 const DetailContent = ({
   book,
+  quantityInCart,
   isFavorite,
   onToggleFavorite,
   onAddToCart,
 }: {
   book: BookDetail
+  quantityInCart: number
   isFavorite?: boolean
   onToggleFavorite: () => void
   onAddToCart: () => void
-}) => (
+}) => {
+  const atMaxStock = quantityInCart >= book.stock
+  return (
     <>
       <h2 id="detail-modal-title" className="detail-modal__title">{book.title}</h2>
       <p className="detail-modal__author">{book.author}</p>
@@ -70,8 +90,14 @@ const DetailContent = ({
         >
           {isFavorite ? '♥ Favorite' : '♡ Add to favorites'}
         </button>
-        <button type="button" className="detail-modal__add-cart" onClick={onAddToCart}>
-          Add to cart
+        <button
+          type="button"
+          className="detail-modal__add-cart"
+          disabled={atMaxStock}
+          onClick={onAddToCart}
+          aria-label={atMaxStock ? 'Maximum stock in cart' : 'Add to cart'}
+        >
+          {atMaxStock ? 'Max in cart' : 'Add to cart'}
         </button>
       </div>
       <p className="detail-modal__description">{book.description}</p>
@@ -88,4 +114,5 @@ const DetailContent = ({
         </section>
       )}
     </>
-  );
+  )
+}
