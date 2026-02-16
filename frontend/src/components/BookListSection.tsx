@@ -1,9 +1,10 @@
-import { useState } from 'react'
+import { useState, useCallback } from 'react'
 import { useSearchParams } from '../context/SearchParamsContext'
 import { SearchBar } from './SearchBar'
 import { BookList } from './BookList'
 import { InventoryValue } from './InventoryValue'
 import { DetailModal } from './DetailModal'
+import { ErrorBanner } from './ErrorBanner'
 import { useToggleFavorite } from '../hooks/useToggleFavorite'
 import { useAddToCart } from '../hooks/useAddToCart'
 import { usePrefetchBookDetail } from '../hooks/usePrefetchBookDetail'
@@ -25,39 +26,46 @@ export const BookListSection = () => {
   const addToCart = useAddToCart()
   const { prefetch, hoverMs } = usePrefetchBookDetail()
 
+  const onBookSelect = useCallback((book: Book) => setSelectedBookId(book.id), [])
+  const onCloseModal = useCallback(() => setSelectedBookId(null), [])
+  const onToggleFavorite = useCallback(
+    (bookId: string) => toggleFavorite.mutate(bookId),
+    [toggleFavorite]
+  )
+  const onAddToCart = useCallback(
+    (bookId: string) => addToCart.mutate({ bookId }),
+    [addToCart]
+  )
+
   return (
     <section className="app__main">
       <SearchBar />
       <InventoryValue query={query} />
       <BookList
         query={query}
-        onBookSelect={(book: Book) => setSelectedBookId(book.id)}
-        onToggleFavorite={(bookId) => toggleFavorite.mutate(bookId)}
-        onAddToCart={(bookId) => addToCart.mutate({ bookId })}
+        onBookSelect={onBookSelect}
+        onToggleFavorite={onToggleFavorite}
+        onAddToCart={onAddToCart}
         onHoverBook={prefetch}
         hoverDelayMs={hoverMs}
       />
       <DetailModal
         bookId={selectedBookId}
-        onClose={() => setSelectedBookId(null)}
-        onToggleFavorite={(bookId) => toggleFavorite.mutate(bookId)}
-        onAddToCart={(bookId) => addToCart.mutate({ bookId })}
+        onClose={onCloseModal}
+        onToggleFavorite={onToggleFavorite}
+        onAddToCart={onAddToCart}
       />
       {toggleFavorite.isError && (
-        <div className="app__error" role="alert">
-          Favorite update failed. Reverted.
-          <button type="button" onClick={() => toggleFavorite.reset()}>
-            Dismiss
-          </button>
-        </div>
+        <ErrorBanner
+          message="Favorite update failed. Reverted."
+          onDismiss={() => toggleFavorite.reset()}
+        />
       )}
       {addToCart.isError && (
-        <div className="app__error" role="alert">
-          {parseApiError(addToCart.error)}
-          <button type="button" onClick={() => addToCart.reset()}>
-            Dismiss
-          </button>
-        </div>
+        <ErrorBanner
+          message={parseApiError(addToCart.error)}
+          onDismiss={() => addToCart.reset()}
+        />
       )}
     </section>
   )
