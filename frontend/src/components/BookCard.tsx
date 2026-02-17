@@ -1,5 +1,6 @@
 import { useRef } from 'react'
 import { formatPrice } from '../lib/formatPrice'
+import { FAVORITE_ICON, getFavoriteLabel } from '../lib/favorites'
 import type { Book } from '../api/types'
 
 interface BookCardProps {
@@ -52,10 +53,10 @@ export const BookCard = ({
           e.stopPropagation()
           onToggleFavorite(book.id)
         }}
-        aria-label={book.favorite ? 'Remove from favorites' : 'Add to favorites'}
+        aria-label={getFavoriteLabel(!!book.favorite)}
         title={book.favorite ? 'Unfavorite' : 'Favorite'}
       >
-        {book.favorite ? '♥' : '♡'}
+        {book.favorite ? FAVORITE_ICON.active : FAVORITE_ICON.inactive}
       </button>
     </div>
     <p className="book-card__author">{book.author}</p>

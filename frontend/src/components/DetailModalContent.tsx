@@ -1,4 +1,5 @@
 import { formatPrice } from '../lib/formatPrice'
+import { FAVORITE_ICON, getFavoriteLabel } from '../lib/favorites'
 import type { BookDetail } from '../api/types'
 
 export interface DetailModalContentProps {
@@ -31,9 +32,9 @@ export const DetailModalContent = ({
           type="button"
           className="detail-modal__favorite"
           onClick={() => onToggleFavorite(bookId)}
-          aria-label={isFavorite ? 'Remove from favorites' : 'Add to favorites'}
+          aria-label={getFavoriteLabel(!!isFavorite)}
         >
-          {isFavorite ? '♥ Favorite' : '♡ Add to favorites'}
+          {isFavorite ? `${FAVORITE_ICON.active} Favorite` : `${FAVORITE_ICON.inactive} Add to favorites`}
         </button>
         <button
           type="button"

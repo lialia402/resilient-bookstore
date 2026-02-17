@@ -1,6 +1,8 @@
 import { useRef, useMemo } from 'react'
 import { useInfiniteBooks } from '../hooks/useInfiniteBooks'
 import { useInfiniteScroll } from '../hooks/useInfiniteScroll'
+import { flattenPages } from '../lib/flattenPages'
+import { parseApiError } from '../lib/parseApiError'
 import { BookCard } from './BookCard'
 import type { Book } from '../api/types'
 
@@ -26,13 +28,10 @@ export const BookList = ({
   })
   const sentinelRef = useRef<HTMLDivElement>(null)
   useInfiniteScroll(sentinelRef, { fetchNextPage, hasNextPage, isFetchingNextPage })
-  const books = useMemo(
-    () => data?.pages.flatMap((p) => p.items) ?? [],
-    [data]
-  )
+  const books = useMemo(() => flattenPages(data), [data])
 
   if (status === 'pending') return <p className="book-list__loading">Loading books…</p>
-  if (status === 'error') return <p className="book-list__error">Error: {String(error)}</p>
+  if (status === 'error') return <p className="book-list__error">Error: {parseApiError(error)}</p>
 
   return (
     <div className="book-list">

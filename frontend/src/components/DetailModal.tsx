@@ -1,6 +1,7 @@
 import { useCallback } from 'react'
 import { useBookDetail } from '../hooks/useBookDetail'
 import { useCart } from '../hooks/useCart'
+import { parseApiError } from '../lib/parseApiError'
 import { DetailModalContent } from './DetailModalContent'
 
 interface DetailModalProps {
@@ -43,7 +44,7 @@ export const DetailModal = ({
           ×
         </button>
         {status === 'pending' && <p>Loading…</p>}
-        {status === 'error' && <p>Error: {String(error)}</p>}
+        {status === 'error' && <p>Error: {parseApiError(error)}</p>}
         {status === 'success' && book && (
           <DetailModalContent
             book={book}

@@ -1,5 +1,6 @@
 import { useInfiniteBooks } from '../hooks/useInfiniteBooks'
 import { formatPrice } from '../lib/formatPrice'
+import { flattenPages } from '../lib/flattenPages'
 
 /**
  * Total inventory value for "currently visible" books: all items from all loaded
@@ -9,9 +10,9 @@ import { formatPrice } from '../lib/formatPrice'
 export const InventoryValue = ({ query }: { query?: string }) => {
   const { data, status } = useInfiniteBooks({ q: query })
 
-  if (status !== 'success' || !data?.pages.length) return null
+  const books = flattenPages(data)
 
-  const books = data.pages.flatMap((p) => p.items)
+  if (status !== 'success' || !books.length) return null
   const total = books.reduce((sum, b) => sum + b.price * b.stock, 0)
 
   return (
