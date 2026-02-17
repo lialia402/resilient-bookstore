@@ -22,11 +22,11 @@ export const BookListSection = () => {
   const onCloseModal = useCallback(() => setSelectedBookId(null), [])
   const onToggleFavorite = useCallback(
     (bookId: string) => toggleFavorite.mutate(bookId),
-    [toggleFavorite]
+    [toggleFavorite.mutate]
   )
   const onAddToCart = useCallback(
     (bookId: string) => addToCart.mutate({ bookId }),
-    [addToCart]
+    [addToCart.mutate]
   )
 
   return (

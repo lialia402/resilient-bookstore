@@ -1,8 +1,8 @@
 import { useRef, useEffect } from 'react'
 
 /**
- * Logs render count for a component (dev only). Use to verify re-render isolation
- * (e.g. Cart should not re-render when user types in Search). See ARCHITECTURE.md.
+ * Logs render count for a component (dev only).
+ * Useful for verifying render isolation and tracking unexpected re-renders.
  */
 export const useRenderCount = (label: string) => {
   const count = useRef(0)

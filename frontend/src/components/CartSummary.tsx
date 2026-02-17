@@ -1,4 +1,5 @@
 import { applyDiscount } from '../lib/applyDiscount'
+import { formatPrice } from '../lib/formatPrice'
 import type { CartItem, DiscountResult } from '../api/types'
 
 interface CartSummaryProps {
@@ -23,7 +24,7 @@ export const CartSummary = ({
   return (
     <>
       <p className="cart__summary">
-        {totalItems} items · ${totalPrice.toFixed(2)}
+        {totalItems} items · {formatPrice(totalPrice)}
       </p>
       {items.length > 0 ? (
         <>
@@ -35,7 +36,7 @@ export const CartSummary = ({
             ))}
           </ul>
           <p className="cart__total">
-            Total: ${discountedTotal.toFixed(2)}
+            Total: {formatPrice(discountedTotal)}
             {discount?.valid && discountedTotal !== totalPrice && (
               <span className="cart__total-note"> ({discount.message})</span>
             )}

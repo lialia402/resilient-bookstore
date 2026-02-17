@@ -1,4 +1,5 @@
 import { useInfiniteBooks } from '../hooks/useInfiniteBooks'
+import { formatPrice } from '../lib/formatPrice'
 
 /**
  * Total inventory value for "currently visible" books: all items from all loaded
@@ -15,7 +16,7 @@ export const InventoryValue = ({ query }: { query?: string }) => {
 
   return (
     <p className="inventory-value">
-      Inventory value (loaded): ${total.toFixed(2)} ({books.length} books)
+      Inventory value (loaded): {formatPrice(total)} ({books.length} books)
     </p>
   )
 }

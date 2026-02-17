@@ -1,3 +1,4 @@
+import { formatPrice } from '../lib/formatPrice'
 import type { BookDetail } from '../api/types'
 
 export interface DetailModalContentProps {
@@ -23,7 +24,7 @@ export const DetailModalContent = ({
       <h2 id="detail-modal-title" className="detail-modal__title">{book.title}</h2>
       <p className="detail-modal__author">{book.author}</p>
       <p className="detail-modal__meta">
-        ${book.price.toFixed(2)} · {book.stock} in stock
+        {formatPrice(book.price)} · {book.stock} in stock
       </p>
       <div className="detail-modal__actions">
         <button

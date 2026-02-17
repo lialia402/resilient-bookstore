@@ -1,4 +1,5 @@
 import { useRef } from 'react'
+import { formatPrice } from '../lib/formatPrice'
 import type { Book } from '../api/types'
 
 interface BookCardProps {
@@ -59,7 +60,7 @@ export const BookCard = ({
     </div>
     <p className="book-card__author">{book.author}</p>
     <p className="book-card__meta">
-      ${book.price.toFixed(2)} · {book.stock} in stock
+      {formatPrice(book.price)} · {book.stock} in stock
     </p>
     <button
       type="button"

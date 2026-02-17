@@ -1,8 +1,6 @@
 import { useCallback } from 'react'
-import { useQuery } from '@tanstack/react-query'
 import { useBookDetail } from '../hooks/useBookDetail'
-import { queryKeys } from '../queryKeys'
-import { fetchCart } from '../api/cart'
+import { useCart } from '../hooks/useCart'
 import { DetailModalContent } from './DetailModalContent'
 
 interface DetailModalProps {
@@ -19,11 +17,7 @@ export const DetailModal = ({
   onAddToCart,
 }: DetailModalProps) => {
   const { data: book, status, error } = useBookDetail(bookId)
-  const { data: cartData } = useQuery({
-    queryKey: queryKeys.cart.all,
-    queryFn: ({ signal }) => fetchCart(signal),
-    enabled: !!bookId,
-  })
+  const { data: cartData } = useCart({ enabled: !!bookId })
 
   const handleBackdropKeyDown = useCallback(
     (e: React.KeyboardEvent) => e.key === 'Escape' && onClose(),

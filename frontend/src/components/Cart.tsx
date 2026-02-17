@@ -1,27 +1,31 @@
-import { useState } from 'react'
-import { useQuery } from '@tanstack/react-query'
-import { queryKeys } from '../queryKeys'
-import { fetchCart, validateDiscount } from '../api/cart'
+import { useState, useEffect } from 'react'
 import { useRenderCount } from '../hooks/useRenderCount'
+import { useCart } from '../hooks/useCart'
+import { useDiscount } from '../hooks/useDiscount'
 import { useClearCart } from '../hooks/useClearCart'
 import { CartSummary } from './CartSummary'
 import { ErrorBanner } from './ErrorBanner'
+
+const DISCOUNT_DEBOUNCE_MS = 500
 
 export const Cart = () => {
   useRenderCount('Cart') // dev only: logs render count to console
 
   const [code, setCode] = useState('')
-  const normalizedCode = code.trim().toLowerCase()
-  const { data, status } = useQuery({
-    queryKey: queryKeys.cart.all,
-    queryFn: ({ signal }) => fetchCart(signal),
-  })
+  const [debouncedCode, setDebouncedCode] = useState('')
+  useEffect(() => {
+    const id = setTimeout(
+      () => setDebouncedCode(code.trim().toLowerCase()),
+      DISCOUNT_DEBOUNCE_MS
+    )
+    return () => clearTimeout(id)
+  }, [code])
 
-  const { data: discount } = useQuery({
-    queryKey: queryKeys.discount({ code: normalizedCode }),
-    queryFn: () => validateDiscount(normalizedCode),
-    enabled: (data?.totalItems ?? 0) >= 1 && normalizedCode.length > 0,
-  })
+  const { data, status } = useCart()
+  const { data: discount } = useDiscount(
+    debouncedCode,
+    (data?.totalItems ?? 0) >= 1
+  )
 
   const clearCart = useClearCart()
 
